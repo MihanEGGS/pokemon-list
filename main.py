@@ -26,21 +26,25 @@ while True:
     choice = input("Enter your choice (1-6): ")
 
     if choice == '1':
-        # https://www.w3schools.com/python/python_lists_access.asp
-        pass
+        ch = int(input("Choose the fighter of thine"))
+        print(pokemons[ch])
     elif choice == '2':
-        # https://www.w3schools.com/python/python_lists_sort.asp
-        pass
+        pokemons.sort()
+        print(pokemons)
     elif choice == '3':
-        # https://www.w3schools.com/python/python_lists_sort.asp
-        pass
+        pokemons.sort(reverse = True)
+        print(pokemons)
     elif choice == '4':
-        # https://www.w3schools.com/python/python_lists_comprehension.asp
-        # https://www.w3schools.com/python/ref_string_startswith.asp
-        pass
+        le = input("type eine Letter")
+        newlist = [x for x in pokemons if le in x]
+        print(newlist)
     elif choice == '5':
-        # https://www.w3schools.com/python/python_lists_comprehension.asp
-        pass
+        neuelist = []
+        len = int(input("Choose thine Langt"))
+        for i in pokemons:
+            if i.__len__() == len:
+                neuelist.append(i) 
+        print(neuelist)
     elif choice == '6':
         print("Exiting")
         break
