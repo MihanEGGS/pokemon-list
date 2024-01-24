@@ -2,7 +2,20 @@
 import csv
 
 pokemons = []
-
+def pagination(pokemons):
+    value = "n"
+    while value == "n":
+        if value == "n":
+            j = 0 
+            l = 10
+            for i in range(j,l):
+                print (pokemons[i])
+        h = input("Would you like to proceed?")
+        if h == "n":
+            j += 10
+            l += 10
+        value == h
+    return pokemons
 # https://www.w3schools.com/python/python_file_handling.asp
 # https://www.w3schools.in/python/file-handling
 with open('pokemon.csv', newline='') as csv_file:
@@ -29,8 +42,8 @@ while True:
         ch = int(input("Choose the fighter of thine"))
         print(pokemons[ch])
     elif choice == '2':
-        pokemons.sort()
-        print(pokemons)
+        neu = pokemons.sort()
+        pagination(neu)
     elif choice == '3':
         pokemons.sort(reverse = True)
         print(pokemons)
